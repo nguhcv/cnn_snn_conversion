@@ -1,2 +1,2 @@
-# cnn_snn_conversion
+# CNN-SNN Conversion
 CNN_SNN Conversion
