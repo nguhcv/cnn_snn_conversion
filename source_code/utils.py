@@ -21,7 +21,7 @@ def tran_test_split(dataset:str, data_path:str, batch_size:int):
                                                  shuffle=True)
         return trainloader, testloader
 
-def cnn_train(train_loader, model, criterion, optimizer):
+def cnn_training(train_loader, model, criterion, optimizer):
     model.train()
 
     total_images = 0
@@ -48,7 +48,7 @@ def cnn_train(train_loader, model, criterion, optimizer):
         # if (step + 1) % 100 == 0:
         #     print("step: {} - loss: {} - acc: {}".format(step + 1, total_loss / total_images, num_corrects / total_images))
 
-def cnn_test(val_loader, model, criterion):
+def cnn_testing(val_loader, model, criterion):
     model.eval()
 
     total_images = 0
