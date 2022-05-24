@@ -1,7 +1,7 @@
 from torch import nn
 import torch
 from source_code.nets import Diehl_2015
-from source_code.utils import tran_test_split,train,test
+from source_code.utils import tran_test_split,cnn_training,cnn_testing
 import argparse
 
 def app(opt):
@@ -21,9 +21,9 @@ def app(opt):
 
     for epoch in range(opt.num_epochs):
         print("epoch: {}".format(epoch))
-        train(train_loader, model, criterion, optimizer)
+        cnn_training(train_loader, model, criterion, optimizer)
 
-        loss, acc = test(test_loader, model, criterion)
+        loss, acc = cnn_testing(test_loader, model, criterion)
         print("In test, loss: {} - acc: {}".format(loss, acc))
 
         if acc > best_acc:
