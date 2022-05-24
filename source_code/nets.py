@@ -9,15 +9,17 @@ class Diehl_2015(nn.Module):
         self.conv2 = nn.Conv2d(in_channels=12, out_channels=64, kernel_size=5, stride=1, padding=0, bias=bias)
         self.avrpool2_1 = nn.AvgPool2d(2)
         self.fc1 = nn.Linear(in_features=1024, out_features=10, bias=bias)
+        self.drop = nn.Dropout2d(p=0.5)
+        self.activation = nn.ReLU()
     def forward(self, x):
         x = self.conv1(x)
-        x = nn.ReLU(x)
+        x = self.activation(x)
         x = self.drop(x)
         x = self.avrpool1_1(x)
         x = self.conv2(x)
-        x = nn.ReLU(x)
+        x = self.activation(x)
         x = self.drop(x)
         x = self.avrpool2_1(x)
         x = x.view(x.size(0), -1)
         x = self.fc1(x)
-        return x
+        return output
