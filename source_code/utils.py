@@ -80,7 +80,7 @@ def proposed_method(train_loader: Any,
               num_steps: int,
               scaling_factor: float=1.):
     """
-    This function implements Input current-based channel-wise algorithm that finds the proper thresholds
+    This function implements our proposed threshold-balancing technique algorithm that finds the proper thresholds
     for ANN-SNN conversion. The function assumes that the input model is a SNN.
     """
     ths = []  # The number of learnable layers
