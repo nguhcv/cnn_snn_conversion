@@ -1,7 +1,7 @@
 from torch import nn
 import torch
-from source_code.nets import Diehl_2015,SNN
-from source_code.utils import tran_test_split,train,test,proposed_method
+from Conversion_Idea.sac_exp2.final.source_code.nets import Diehl_2015,SNN_Huynh2021
+from Conversion_Idea.sac_exp2.final.source_code.utils import tran_test_split,proposed_method
 import argparse
 
 def app(opt):
@@ -14,7 +14,7 @@ def app(opt):
     if torch.cuda.is_available():
         ann.cuda()
 
-    snn = SNN(batch_size=opt.batch_size)
+    snn = SNN_Huynh2021(batch_size=opt.batch_size)
 
     saved_state_dict = torch.load(opt.save)
     print(saved_state_dict['epoch'])
