@@ -1,4 +1,7 @@
-from torch import nn
+import torch
+import torch.nn as nn
+from typing import List
+from source_code.neurons import CW_softIF,PB_neurons
 
 class Diehl_2015(nn.Module):
     def __init__(self, bias=False):
