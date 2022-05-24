@@ -5,5 +5,5 @@
 
 ## Files
 
-'source_code/cnn_train.py': Training a CNN model on MNIST dataset
+'source_code/cnn_train.py': Training a CNN model on MNIST dataset. \n
 'source_code/snn_inference.py': Perform a CNN-SNN conversion with our proposed method
