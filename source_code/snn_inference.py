@@ -1,7 +1,7 @@
 from torch import nn
 import torch
-from Conversion_Idea.sac_exp2.final.source_code.nets import Diehl_2015,SNN_Huynh2021
-from Conversion_Idea.sac_exp2.final.source_code.utils import tran_test_split,proposed_method
+from source_code.nets import Diehl_2015,SNN_Huynh2021
+from source_code.utils import tran_test_split,proposed_method
 import argparse
 
 def app(opt):
